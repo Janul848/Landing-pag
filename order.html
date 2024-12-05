@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* General Styles */
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+HR+Lijeva:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Order Form Section */
+.order-online {
+    background-color: #fff;
+    padding: 40px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.order-online h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.order-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.form-group div {
+    display: flex;
+    align-items: center;
+}
+
+.submit-button {
+    background-color: #ff6600; /* Green color */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color:#cc5200 ; /* Darker green on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .order-online {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .submit-button {
+        font-size: 16px;
+    }
+}
+</style>
+</head>
+<body>
+    <section class="order-online" id="order">
+    <h2>Order Your Pizza</h2>
+        <form action="https://api.web3forms.com/submit" method="POST"  class="order-form">
+    <input type="hidden" name="access_key" value="1ddf89c4-624b-45c8-979d-c7e374510478">
+        <div class="form-group">
+            <label for="customer-name">Name:</label>
+            <input type="text" id="customer-name" name="customer_name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+            <label for="customer-email">Email:</label>
+            <input type="email" id="customer-email" name="customer_email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <label for="pizza-selection">Select Your Pizza:</label>
+            <select id="pizza-selection" name="pizza" required>
+                <option value="" disabled selected>Select a pizza</option>
+                <option value="margherita">Margherita Pizza - $12.99</option>
+                <option value="pepperoni">Pepperoni Pizza - $14.99</option>
+                <option value="bbq-chicken">BBQ Chicken Pizza - $15.99</option>
+                <option value="veggie">Veggie Pizza - $13.99</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="size-selection">Select Size:</label>
+            <select id="size-selection" name="size" required>
+                <option value="" disabled selected>Select size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="toppings">Add Toppings (optional):</label>
+            <div>
+                <input type="checkbox" id="extra-cheese" name="toppings" value="extra-cheese">
+                <label for="extra-cheese">Extra Cheese</label>
+            </div>
+            <div>
+                <input type="checkbox" id="olives" name="toppings" value="olives">
+                <label for="olives">Olives</label>
+            </div>
+            <div>
+                <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
+                <label for="mushrooms">Mushrooms</label>
+            </div>
+            <div>
+                <input type="checkbox" id="peppers" name="toppings" value="peppers">
+                <label for="peppers">Peppers</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="delivery-address">Delivery Address:</label>
+            <input type="text" id="delivery-address" name="delivery_address" placeholder="Enter your delivery address" required>
+        </div>
+        <button type="submit" class="submit-button">Place Order</button>
+    </form>
+</section>
+</body>
+</html>

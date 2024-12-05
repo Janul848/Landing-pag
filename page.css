@@ -1,0 +1,707 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+HR+Lijeva:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #fff; /* Yellow background */
+    padding: 20px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 50px; /* Adjust the logo size */
+}
+
+nav {
+    flex-grow: 1;
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-menu li {
+    margin: 0 15px; /* Space between menu items */
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333; /* Dark text color */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #ff6600; /* Change color on hover */
+}
+.btn secondary{
+    background:transparent;
+}
+
+.cta-button {
+    margin-left: 20px; /* Space between menu and button */
+}
+
+.btn {
+    text-decoration: none;
+    background-color: #ff6600; /* Orange button */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.btn.primary {
+    text-decoration: none;
+    background-color: #ff6600; /* Button color */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    border: 2px solid white; /* Add this line for the white border */
+}
+
+.btn.primary:hover {
+    background-color: #cc5200; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+.btn:hover {
+    background-color: #cc5200; /* Darker orange on hover */
+}
+.hero {
+    background-image: url('pizza-background.jpg'); /* Replace with your image path */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    height: 600px; /* Adjust height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Text color */
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Bring content above the overlay */
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3em; /* Adjust font size for the headline */
+    margin-bottom: 10px; /* Space between headline and subheadline */
+}
+
+.hero p {
+    font-size: 1.5em; /* Adjust font size for the subheadline */
+    margin-bottom: 20px; /* Space between subheadline and buttons */
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+}
+
+.btn {
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.primary {
+    background-color: #ff6600; /* Primary button color */
+    color: white;
+}
+
+.primary:hover {
+    background-color: #cc5200; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.secondary {
+    background-color: transparent; /* Transparent for secondary button */
+    color: white;
+    border: 2px solid white; /* White border */
+}
+
+.secondary:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light overlay on hover */
+}
+
+
+.featured-pizzas {
+    padding: 20px;
+    text-align: center;
+    overflow: hidden; /* Prevents overflow */
+}
+
+.pizza-scroll {
+    display: flex;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Prevents line breaks */
+}
+
+.pizza-grid {
+    display: flex; /* Use flex to arrange pizza items in a row */
+}
+
+.pizza-item {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    margin-right: 20px; /* Space between items */
+    min-width: 250px; /* Minimum width for each pizza item */
+    transition: transform 0.2s;
+}
+
+.pizza-item:hover {
+    transform: scale(1.05);
+}
+
+.pizza-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #d9534f;
+}
+
+.order-button {
+    padding: 10px 15px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.order-button:hover {
+    background-color: #4cae4c;
+}
+
+/* Animation for scrolling */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.why-choose-us {
+    padding: 60px 20px;
+    background-color: #f9f9f9; /* Light background color */
+    text-align: center;
+}
+
+.why-choose-us h2 {
+    font-size: 2.5em; /* Section title size */
+    margin-bottom: 30px; /* Space below the title */
+}
+
+.selling-points {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between points */
+    margin-bottom: 40px; /* Space below selling points */
+}
+
+.point {
+    background-color: white; /* White background for each point */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    width: 250px; /* Fixed width for points */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.point h3 {
+    font-size: 1.5em; /* Title size for points */
+    margin-bottom: 10px; /* Space below point title */
+}
+
+.testimonials {
+    margin-top: 40px; /* Space above testimonials */
+}
+
+.testimonials h3 {
+    font-size: 2em; /* Testimonials title size */
+    margin-bottom: 20px; /* Space below testimonials title */
+}
+
+.testimonial {
+    background-color: #fff; /* White background for testimonials */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px;
+    margin: 10px 0; /* Space between testimonials */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.testimonial cite {
+    display: block; /* Make citation a block element */
+    margin-top: 10px; /* Space above citation */
+    font-style: italic; /* Italic style for citation */
+    color: #555; /* Darker color for citation */
+}
+.promotions {
+    padding: 60px 20px;
+    background-color: #fff; /* White background for the promotions section */
+    text-align: center;
+}
+
+.promotions h2 {
+    font-size: 2.5em; /* Section title size */
+    margin-bottom: 30px; /* Space below the title */
+}
+
+.promotion-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+}
+
+.card {
+    background-color: #f9f9f9; /* Light background for each card */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    width: 300px; /* Fixed width for cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s; /* Smooth transform on hover */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.card h3 {
+    font-size: 1.8em; /* Title size for cards */
+    margin-bottom: 10px; /* Space below card title */
+}
+
+.card p {
+    margin-bottom: 20px; /* Space below card description */
+}
+.hero{
+    background-image: url("https://wallpapers.com/images/hd/pizza-hut-ingredients-5vf4sz1alaxxv5sj.jpg");
+     background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
+}
+.btn {
+    text-decoration: none;
+    background-color: #ff6600; /* Button color */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #cc5200; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+/* Find Us Section */
+.find-us {
+    padding: 40px;
+    background-color: #f4f4f4;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.address-list,
+.delivery-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Allow both to grow equally */
+    margin: 0 10px; /* Add some space between them */
+}
+
+.address-list h3,
+.delivery-info h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.address-list ul,
+.delivery-info ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.address-list li,
+.delivery-info li {
+    margin-bottom: 5px; /* Space between list items */
+}
+.pizza-item img {
+    width: 250px; /* Set a fixed width */
+    height: 200px; /* Set a fixed height */
+    border-radius: 8px; /* Keep the rounded corners */
+}
+.container {
+    display: flex; /* Use flexbox layout */
+    align-items: center; /* Center items vertically */
+}
+
+.container img {
+    width: 50%; /* Set image width */
+    max-width: 300px; /* Optional: Set a max width */
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+.quic33k-links a {
+    color: #fff; /* Change this to your desired color */
+}
+
+.quic33k-links a:hover {
+    color: #fff;/* Change this to your desired hover color */
+}
+.description {
+    padding: 20px; /* Add some padding around the text */
+    flex: 1; /* Allow description to take up remaining space */
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .info-container {
+        flex-direction: column; /* Stack vertically on small screens */
+    }
+    .address-list,
+    .delivery-info {
+        margin: 10px 0; /* Add margin for vertical stacking */
+    }
+}
+
+.map-container {
+    margin-bottom: 40px; /* Space below the map */
+}
+
+.address-list, .delivery-info {
+    margin-top: 20px; /* Space above address and delivery info */
+    text-align: left; /* Align text to the left */
+    max-width: 600px; /* Max width for better readability */
+    margin-left: auto; /* Center the section */
+    margin-right: auto; /* Center the section */
+}
+
+.address-list h3, .delivery-info h3 {
+    font-size: 1.8em; /* Subsection title size */
+    margin-bottom: 15px; /* Space below subsection title */
+}
+
+.address-list ul, .delivery-info ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.address-list li, .delivery-info li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+.delivery-info p {
+    margin-bottom: 10px; /* Space below paragraphs */
+}
+.about-us {
+    padding: 60px 20px;
+    background-color: #fff; /* White background for the about us section */
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 2.5em; /* Section title size */
+    margin-bottom: 30px; /* Space below the title */
+}
+
+.description {
+    max-width: 800px; /* Max width for better readability */
+    margin: 0 auto; /* Center the description */
+    margin-bottom: 40px; /* Space below the description */
+}
+
+.description p {
+    font-size: 1.2em; /* Font size for the description */
+    line-height: 1.6; /* Line height for better readability */
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center; /* Center the images */
+    gap: 20px; /* Space between images */
+    flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+}
+
+.gallery-image {
+    width: 300px; /* Fixed width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+.newsletter-signup {
+    padding: 60px 20px;
+    background-color: #f9f9f9; /* Light background color */
+    text-align: center;
+}
+
+.newsletter-signup h2 {
+    font-size: 2.5em; /* Section title size */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.newsletter-signup p {
+    font-size: 1.2em; /* Font size for the description */
+    margin-bottom: 30px; /* Space below the description */
+}
+
+.signup-form {
+    display: flex;
+    justify-content: center; /* Center the form elements */
+    gap: 10px; /* Space between input and button */
+}
+
+.email-input {
+    padding: 10px;
+    font-size: 1em; /* Font size for input */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    width: 300px; /* Fixed width for input */
+}
+
+.submit-button {
+    padding: 10px 20px;
+    font-size: 1em; /* Font size for button */
+    background-color: #ff6600; /* Button color */
+    color: white;
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    .footer {
+    background-color: #333; /* Dark background for the footer */
+    color: white; /* White text color */
+    padding: 40px 20px; /* Padding for the footer */
+    text-align: center; /* Center text */
+}
+
+.footer-container {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-around; /* Space between columns */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-bottom: 20px; /* Space below the container */
+}
+
+.quick-links, .contact-info, .social-media {
+    flex: 1; /* Equal width for each section */
+    min-width: 200px; /* Minimum width for responsiveness */
+    margin: 10px; /* Space around each section */
+}
+
+.quick-links h3, .contact-info h3, .social-media h3 {
+    font-size: 1.5em; /* Section title size */
+    margin-bottom: 15px; /* Space below section titles */
+}
+
+.quick-links ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.quick-links li {
+    margin-bottom: 10px; /* Space between links */
+}
+
+.quick-links a, .social-icon {
+    color: white; /* White text for links */
+    text-decoration: none; /* Remove underline */
+}
+
+.quick-links a:hover, .social-icon:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.social-icon {
+    display: inline-block; /* Inline block for social icons */
+    margin: 0 10px; /* Space between icons */
+}
+
+.copyright {
+    background-color: #222; /* Darker background for copyright */
+    padding: 10px 0; /* Padding for copyright */
+}
+
+.copyright p {
+    margin: 0; /* Remove margin */
+}
+
+/* JavaScript to dynamically set the year */
+
+    transition: background-color 0.3s, transform 0.3s; /* Transition effects */
+}
+
+.submit-button:hover {
+    background-color: #cc5200; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+.footer {
+    background-color: #333; /* Dark background for the footer */
+    color: white; /* White text color */
+    padding: 40px 20px; /* Padding for the footer */
+    text-align: center; /* Center text */
+}
+
+.footer-container {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-around; /* Space between columns */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-bottom: 20px; /* Space below the container */
+}
+
+.quick-links, .contact-info, .social-media {
+    flex: 1; /* Equal width for each section */
+    min-width: 200px; /* Minimum width for responsiveness */
+    margin: 10px; /* Space around each section */
+}
+
+.quick-links h3, .contact-info h3, .social-media h3 {
+    font-size: 1.5em; /* Section title size */
+    margin-bottom: 15px; /* Space below section titles */
+}
+
+.quick-links ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.quick-links li {
+    margin-bottom: 10px; /* Space between links */
+}
+
+.quick-links a, .social-icon {
+    color: white; /* White text for links */
+    text-decoration: none; /* Remove underline */
+}
+
+.quick-links a:hover, .social-icon:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+.social-icon {
+    display: inline-block; /* Inline block for social icons */
+    margin: 0 10px; /* Space between icons */
+}
+.copyright {
+    background-color: #222; /* Darker background for copyright */
+    padding: 10px 0; /* Padding for copyright */
+}
+.copyright p {
+    margin: 0; /* Remove margin */
+}
+/* Contact Form Section */
+.contact-form-section {
+    background-color: #fff;
+    padding: 40px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.contact-form-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.submit-button {
+    background-color: #ff6600; /* Blue color */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #cc5200; /* Darker blue on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .contact-form-section {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .submit-button {
+        font-size: 16px;
+    }
+}
